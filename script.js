@@ -2,11 +2,13 @@
 // HERO SLIDER
 // ==========================
 
-const slider = document.getElementById("heroSlider");
+const slider =
+  document.getElementById("heroSlider");
 
 if (slider) {
 
-  const totalSlides = 3;
+  const totalSlides =
+    slider.children.length;
 
   let currentSlide = 0;
 
@@ -102,8 +104,12 @@ const overlay =
   document.getElementById("overlay");
 
 
-// OPEN MENU
-if (menuBtn) {
+// OPEN SIDEBAR
+if (
+  menuBtn &&
+  mobileMenu &&
+  overlay
+) {
 
   menuBtn.addEventListener("click", () => {
 
@@ -122,18 +128,26 @@ if (menuBtn) {
 }
 
 
-// CLOSE MENU
+// CLOSE SIDEBAR
 function closeMenu() {
 
-  mobileMenu.style.right = "-100%";
+  if (mobileMenu) {
 
-  overlay.classList.add("opacity-0");
+    mobileMenu.style.right = "-100%";
 
-  setTimeout(() => {
+  }
 
-    overlay.classList.add("hidden");
+  if (overlay) {
 
-  }, 300);
+    overlay.classList.add("opacity-0");
+
+    setTimeout(() => {
+
+      overlay.classList.add("hidden");
+
+    }, 300);
+
+  }
 
 }
 
@@ -158,3 +172,115 @@ if (overlay) {
   );
 
 }
+
+
+
+// ==========================
+// ACTIVE NAVLINK
+// ==========================
+
+const currentPage =
+  window.location.pathname
+    .split("/")
+    .pop();
+
+const navLinks =
+  document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+
+  const linkPage =
+    link.getAttribute("href")
+      .split("/")
+      .pop();
+
+  // REMOVE ACTIVE
+  link.classList.remove(
+    "text-blue-600"
+  );
+
+  // DEFAULT COLOR
+  link.classList.add(
+    "text-gray-700"
+  );
+
+  // ACTIVE LINK
+  if (
+    currentPage === linkPage
+  ) {
+
+    link.classList.remove(
+      "text-gray-700"
+    );
+
+    link.classList.add(
+      "text-blue-600"
+    );
+
+  }
+
+});
+
+
+
+// ==========================
+// CLOSE SIDEBAR ON LINK CLICK
+// ==========================
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    closeMenu();
+
+  });
+
+});
+
+
+
+// ==========================
+// STICKY HEADER SHADOW
+// ==========================
+
+const header =
+  document.querySelector("header");
+
+if (header) {
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 20) {
+
+      header.classList.add(
+        "shadow-md"
+      );
+
+    } else {
+
+      header.classList.remove(
+        "shadow-md"
+      );
+
+    }
+
+  });
+
+}
+
+
+
+// ==========================
+// AUTO CLOSE SIDEBAR
+// ON DESKTOP VIEW
+// ==========================
+
+window.addEventListener("resize", () => {
+
+  if (window.innerWidth >= 1024) {
+
+    closeMenu();
+
+  }
+
+});
