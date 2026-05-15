@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Blog | deva24
+  </title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    *{
+      font-family:'Poppins',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-white overflow-x-hidden">
+
+  <!-- ===================================== -->
+  <!-- HEADER -->
+  <!-- ===================================== -->
+
+ <header
+  class="w-full bg-white shadow-sm sticky top-0 z-50"
+>
+
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+
+    <!-- NAVBAR -->
+    <div
+      class="flex items-center justify-between h-[68px]"
+    >
+
+      <!-- ================= -->
+      <!-- LOGO -->
+      <!-- ================= -->
+
+      <a
+        href="/"
+        class="flex items-center gap-2"
+      >
+
+        <!-- ICON -->
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center shadow-sm"
+        >
+
+          <i
+            class="fa-solid fa-heart-pulse text-white text-lg"
+          ></i>
+
+        </div>
+
+        <!-- TEXT -->
+        <div>
+
+          <h1
+            class="text-[28px] font-bold leading-none"
+          >
+
+            <span class="text-blue-600">
+              deva
+            </span>
+
+            <span class="text-green-500">
+              24
+            </span>
+
+          </h1>
+
+          <p
+            class="text-gray-500 text-[11px] mt-[1px]"
+          >
+
+            Your Health, Our Priority
+
+          </p>
+
+        </div>
+
+      </a>
+
+      <!-- ================= -->
+      <!-- DESKTOP MENU -->
+      <!-- ================= -->
+
+      <nav
+        class="hidden lg:flex items-center gap-8"
+      >
+
+        <a
+          href="/index.html"
+          class="relative text-blue-600 text-[14px] font-medium pb-1 after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-blue-600"
+        >
+
+          Home
+
+        </a>
+
+        <a
+          href="/pages/about.html"
+          class="relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium pb-1 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+        >
+
+          About Us
+
+        </a>
+
+        <a
+          href="/pages/service.html"
+          class="relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium pb-1 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+        >
+
+          Services
+
+        </a>
+
+        <a
+          href="/pages/blog.html"
+          class="relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium pb-1 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+        >
+
+          Blog
+
+        </a>
+
+        <a
+          href="/pages/contact.html"
+          class="relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium pb-1 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+        >
+
+          Contact
+
+        </a>
+
+      </nav>
+
+      <!-- ================= -->
+      <!-- RIGHT BUTTON -->
+      <!-- ================= -->
+
+      <div
+        class="hidden lg:flex items-center"
+      >
+
+        <button
+          class="h-9 px-5 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white text-[13px] font-semibold"
+        >
+
+          Consult Now
+
+        </button>
+
+      </div>
+
+      <!-- ================= -->
+      <!-- MOBILE BUTTON -->
+      <!-- ================= -->
+
+      <button
+        id="menu-btn"
+        class="lg:hidden text-2xl text-[#111827]"
+      >
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ========================= -->
+<!-- MOBILE SIDEBAR -->
+<!-- ========================= -->
+
+<!-- OVERLAY -->
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black/40 z-[98] hidden opacity-0 transition duration-300"
+></div>
+
+<!-- SIDEBAR -->
+<div
+  id="mobile-menu"
+  class="fixed top-0 right-[-100%] w-[280px] h-screen bg-white z-[99] shadow-2xl transition-all duration-500"
+>
+
+  <!-- TOP -->
+  <div
+    class="flex items-center justify-between px-5 h-[70px] border-b border-gray-100"
+  >
+
+    <!-- LOGO -->
+    <div
+      class="flex items-center gap-2"
+    >
+
+      <div
+        class="w-9 h-9 rounded-xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
+      >
+
+        <i class="fa-solid fa-heart-pulse text-white"></i>
+
+      </div>
+
+      <h2
+        class="text-2xl font-bold"
+      >
+
+        <span class="text-blue-600">
+          deva
+        </span>
+
+        <span class="text-green-500">
+          24
+        </span>
+
+      </h2>
+
+    </div>
+
+    <!-- CLOSE -->
+    <button
+      id="close-btn"
+      class="text-xl text-gray-700"
+    >
+
+      <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+  </div>
+
+  <!-- NAVLINKS -->
+  <div
+    class="flex flex-col px-6 py-6"
+  >
+
+    <a
+      href="/index.html"
+      class="py-3 border-b border-gray-100 text-[15px] font-medium text-blue-600"
+    >
+
+      Home
+
+    </a>
+
+    <a
+      href="/pages/about.html"
+      class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+
+      About Us
+
+    </a>
+
+    <a
+      href="/pages/service.html"
+      class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+
+      Services
+
+    </a>
+
+    <a
+      href="/pages/blog.html"
+      class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+
+      Blog
+
+    </a>
+
+    <a
+      href="/pages/contact.html"
+      class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+
+      Contact
+
+    </a>
+
+    <!-- BUTTON -->
+    <button
+      class="mt-6 h-11 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
+    >
+
+      Consult Now
+
+    </button>
+
+  </div>
+
+</div>
+
+
+ 
+<section class="relative w-full min-h-[65vh] overflow-hidden flex items-center justify-center">
+
+  <!-- BG IMAGE -->
+  <img
+    src="/imgs/blog-hero.jpg"
+    alt="Blog Hero"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- OVERLAY -->
+  <div
+    class="absolute inset-0 bg-black/60"
+  ></div>
+
+  <!-- CONTENT -->
+  <div
+    class="relative z-10 max-w-3xl mx-auto px-6 text-center"
+  >
+
+    <!-- TAG -->
+    <span
+      class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-green-400 text-[10px] font-semibold uppercase tracking-[2px] border border-white/10"
+    >
+
+      Our Blog
+
+    </span>
+
+    <!-- HEADING -->
+    <h1
+      class="mt-5 text-3xl lg:text-5xl font-bold leading-tight text-white"
+    >
+
+      Health Tips &
+      <span class="text-blue-400">
+
+        Medical News
+
+      </span>
+
+    </h1>
+
+    <!-- TEXT -->
+    <p
+      class="mt-4 text-white/75 text-sm leading-7 max-w-xl mx-auto"
+    >
+
+      Read latest healthcare articles,
+      wellness guides and expert medical tips.
+
+    </p>
+
+    <!-- BUTTONS -->
+    <div
+      class="flex flex-wrap justify-center gap-4 mt-7"
+    >
+
+      <button
+        class="h-11 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
+      >
+
+        Explore Blogs
+
+      </button>
+
+      <button
+        class="h-11 px-7 rounded-xl bg-white/10 hover:bg-white hover:text-[#111827] border border-white/20 transition text-white text-sm font-semibold backdrop-blur-md"
+      >
+
+        Contact Us
+
+      </button>
+
+    </div>
+
+    <!-- FEATURES -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-9"
+    >
+
+      <!-- ITEM -->
+      <div
+        class="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3"
+      >
+
+        <div
+          class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-300 flex items-center justify-center text-sm"
+        >
+
+          <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+        <h3
+          class="text-[12px] font-semibold text-white leading-5 text-left"
+        >
+
+          Health Tips
+
+        </h3>
+
+      </div>
+
+      <!-- ITEM -->
+      <div
+        class="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3"
+      >
+
+        <div
+          class="w-10 h-10 rounded-xl bg-green-500/20 text-green-300 flex items-center justify-center text-sm"
+        >
+
+          <i class="fa-solid fa-capsules"></i>
+
+        </div>
+
+        <h3
+          class="text-[12px] font-semibold text-white leading-5 text-left"
+        >
+
+          Wellness Guides
+
+        </h3>
+
+      </div>
+
+      <!-- ITEM -->
+      <div
+        class="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-4 py-3"
+      >
+
+        <div
+          class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-300 flex items-center justify-center text-sm"
+        >
+
+          <i class="fa-solid fa-newspaper"></i>
+
+        </div>
+
+        <h3
+          class="text-[12px] font-semibold text-white leading-5 text-left"
+        >
+
+          Medical News
+
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ 
+<section class="w-full py-10 bg-[#f8fbff] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- MAIN BOX -->
+    <div
+      class="grid lg:grid-cols-2 bg-white rounded-[32px] overflow-hidden shadow-[0_15px_40px_rgba(15,23,42,0.06)] hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] transition duration-500"
+    >
+
+      <!-- LEFT IMAGE -->
+      <div
+        class="relative overflow-hidden min-h-[320px]"
+      >
+
+        <img
+          src="/imgs/featured-blog.jpg"
+          alt="Featured Blog"
+          class="w-full h-full object-cover hover:scale-110 transition duration-700"
+        >
+
+        <!-- OVERLAY -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+        ></div>
+
+        <!-- FLOAT TAG -->
+        <div
+          class="absolute top-5 left-5 px-4 py-2 rounded-full bg-white text-blue-600 text-[10px] font-semibold uppercase tracking-[2px] shadow-lg"
+        >
+
+          Trending Blog
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div
+        class="flex flex-col justify-center p-7 lg:p-10"
+      >
+
+        <!-- TAG -->
+        <span
+          class="text-green-500 text-[10px] font-semibold uppercase tracking-[2px]"
+        >
+
+          Featured Article
+
+        </span>
+
+        <!-- TITLE -->
+        <h2
+          class="mt-3 text-3xl lg:text-4xl font-bold leading-tight text-[#111827]"
+        >
+
+          10 Tips To Stay
+          <span class="text-blue-600">
+
+            Healthy Everyday
+
+          </span>
+
+        </h2>
+
+        <!-- TEXT -->
+        <p
+          class="mt-4 text-gray-500 text-sm leading-7 max-w-lg"
+        >
+
+          Discover simple daily healthcare habits,
+          wellness routines and expert advice for a
+          healthier and happier lifestyle.
+
+        </p>
+
+        <!-- META -->
+        <div
+          class="flex flex-wrap items-center gap-5 mt-6"
+        >
+
+          <!-- DATE -->
+          <div
+            class="flex items-center gap-2 text-gray-500 text-sm"
+          >
+
+            <div
+              class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center"
+            >
+
+              <i class="fa-regular fa-calendar"></i>
+
+            </div>
+
+            <span>
+              15 Jan 2025
+            </span>
+
+          </div>
+
+          <!-- AUTHOR -->
+          <div
+            class="flex items-center gap-3"
+          >
+
+            <img
+              src="/imgs/user1.jpg"
+              alt="Admin"
+              class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-md"
+            >
+
+            <div>
+
+              <h4
+                class="text-sm font-semibold text-[#111827]"
+              >
+
+                Admin
+
+              </h4>
+
+              <p
+                class="text-xs text-gray-500"
+              >
+
+                Healthcare Expert
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div
+          class="mt-8"
+        >
+
+          <button
+            class="h-11 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold shadow-lg hover:scale-105 duration-300"
+          >
+
+            Read Full Article
+
+            <i class="fa-solid fa-arrow-right ml-2"></i>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="w-full py-10 bg-[#f8fbff] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP -->
+    <div class="text-center max-w-xl mx-auto">
+
+      <span
+        class="text-green-500 text-[10px] font-semibold uppercase tracking-[2px]"
+      >
+
+        Latest Articles
+
+      </span>
+
+      <h2
+        class="mt-2 text-3xl lg:text-4xl font-bold text-[#111827]"
+      >
+
+        Health &
+        <span class="text-blue-600">
+
+          Wellness Blogs
+
+        </span>
+
+      </h2>
+
+    </div>
+
+    <!-- BLOG GRID -->
+    <div
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-9"
+    >
+
+      <!-- CARD 1 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog1.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-semibold"
+          >
+
+            Nutrition
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>18 Jan 2025</span>
+            <span>5 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-blue-600 transition"
+          >
+
+            Best Foods For
+            Strong Immunity
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Foods that naturally improve immunity.
+
+          </p>
+
+          <button
+            class="mt-5 text-blue-600 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(34,197,94,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog2.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-green-500 text-white text-[10px] font-semibold"
+          >
+
+            Fitness
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>17 Jan 2025</span>
+            <span>4 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-green-500 transition"
+          >
+
+            Daily Exercise
+            Benefits
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Daily workouts improve body health.
+
+          </p>
+
+          <button
+            class="mt-5 text-green-500 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(168,85,247,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog3.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-purple-500 text-white text-[10px] font-semibold"
+          >
+
+            Wellness
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>16 Jan 2025</span>
+            <span>6 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-purple-500 transition"
+          >
+
+            Mental Health
+            Tips
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Reduce stress with simple wellness habits.
+
+          </p>
+
+          <button
+            class="mt-5 text-purple-500 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(249,115,22,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog4.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-orange-500 text-white text-[10px] font-semibold"
+          >
+
+            Healthcare
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>14 Jan 2025</span>
+            <span>3 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-orange-500 transition"
+          >
+
+            Regular Health
+            Checkups
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Early detection prevents major diseases.
+
+          </p>
+
+          <button
+            class="mt-5 text-orange-500 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(236,72,153,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog5.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-pink-500 text-white text-[10px] font-semibold"
+          >
+
+            Lifestyle
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>13 Jan 2025</span>
+            <span>4 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-pink-500 transition"
+          >
+
+            Improve Your
+            Sleep Quality
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Better sleep improves body and mind.
+
+          </p>
+
+          <button
+            class="mt-5 text-pink-500 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div
+        class="group bg-white rounded-[24px] overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_16px_40px_rgba(6,182,212,0.12)] hover:-translate-y-2 transition duration-500"
+      >
+
+        <div class="relative overflow-hidden">
+
+          <img
+            src="/imgs/blog6.jpg"
+            class="w-full h-[180px] object-cover group-hover:scale-110 transition duration-700"
+          >
+
+          <span
+            class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cyan-500 text-white text-[10px] font-semibold"
+          >
+
+            Heart Care
+
+          </span>
+
+        </div>
+
+        <div class="p-5">
+
+          <div
+            class="flex items-center gap-4 text-gray-400 text-[11px]"
+          >
+
+            <span>12 Jan 2025</span>
+            <span>5 Min Read</span>
+
+          </div>
+
+          <h3
+            class="mt-3 text-lg font-bold text-[#111827] leading-7 group-hover:text-cyan-500 transition"
+          >
+
+            Heart Health
+            Tips
+
+          </h3>
+
+          <p
+            class="mt-2 text-gray-500 text-[13px] leading-6"
+          >
+
+            Healthy habits for a stronger heart.
+
+          </p>
+
+          <button
+            class="mt-5 text-cyan-500 text-sm font-semibold"
+          >
+
+            Read More →
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="w-full py-10 bg-[#f8fbff] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- BANNER -->
+    <div
+      class="relative rounded-[30px] overflow-hidden bg-[#0f172a] shadow-[0_18px_50px_rgba(15,23,42,0.15)]"
+    >
+
+      <!-- BG IMAGE -->
+      <img
+        src="/imgs/newsletter-bg2.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-20"
+      >
+
+      <!-- OVERLAY -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#0f172a]/95 via-[#0f172a]/80 to-[#0f172a]/40"
+      ></div>
+
+      <!-- CONTENT -->
+      <div
+        class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 px-7 lg:px-12 py-8"
+      >
+
+        <!-- LEFT -->
+        <div>
+
+          <span
+            class="text-green-400 text-[10px] font-semibold uppercase tracking-[2px]"
+          >
+
+            Newsletter
+
+          </span>
+
+          <h2
+            class="mt-3 text-2xl lg:text-4xl font-bold text-white leading-tight"
+          >
+
+            Get Weekly
+            <span class="text-blue-400">
+
+              Health Updates
+
+            </span>
+
+          </h2>
+
+          <p
+            class="mt-3 text-white/70 text-sm leading-7 max-w-xl"
+          >
+
+            Subscribe for wellness articles,
+            medical news and healthcare tips.
+
+          </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div
+          class="flex flex-wrap gap-4"
+        >
+
+          <button
+            class="h-11 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold shadow-lg"
+          >
+
+            Subscribe Now
+
+          </button>
+
+          <button
+            class="h-11 px-7 rounded-xl bg-white/10 border border-white/10 hover:bg-white hover:text-[#111827] transition text-white text-sm font-semibold backdrop-blur-md"
+          >
+
+            Learn More
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="w-full py-10 bg-[#f8fbff] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP -->
+    <div class="text-center max-w-xl mx-auto">
+
+      <span
+        class="text-green-500 text-[10px] font-semibold uppercase tracking-[2px]"
+      >
+
+        Trending Topics
+
+      </span>
+
+      <h2
+        class="mt-2 text-3xl lg:text-4xl font-bold text-[#111827]"
+      >
+
+        Popular Health
+        <span class="text-blue-600">
+
+          Categories
+
+        </span>
+
+      </h2>
+
+    </div>
+
+    <!-- CARDS -->
+    <div
+      class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-9"
+    >
+
+      <!-- CARD -->
+      <div
+        class="group relative rounded-[26px] overflow-hidden h-[250px] flex items-end p-5 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(37,99,235,0.15)] transition duration-500"
+      >
+
+        <!-- IMAGE -->
+        <img
+          src="/imgs/topic1.jpg"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+        >
+
+        <!-- OVERLAY -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+        ></div>
+
+        <!-- CONTENT -->
+        <div
+          class="relative z-10 text-white"
+        >
+
+          <!-- ICON -->
+          <div
+            class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-lg border border-white/10"
+          >
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+          </div>
+
+          <!-- TITLE -->
+          <h3
+            class="mt-4 text-xl font-bold"
+          >
+
+            Heart Care
+
+          </h3>
+
+          <!-- TEXT -->
+          <p
+            class="mt-2 text-white/70 text-[13px] leading-6"
+          >
+
+            Healthy habits for a stronger heart.
+
+          </p>
+
+          <!-- BUTTON -->
+          <button
+            class="mt-4 text-green-400 text-sm font-semibold"
+          >
+
+            Explore →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group relative rounded-[26px] overflow-hidden h-[250px] flex items-end p-5 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(34,197,94,0.15)] transition duration-500"
+      >
+
+        <img
+          src="/imgs/topic2.jpg"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+        ></div>
+
+        <div
+          class="relative z-10 text-white"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-lg border border-white/10"
+          >
+
+            <i class="fa-solid fa-dumbbell"></i>
+
+          </div>
+
+          <h3
+            class="mt-4 text-xl font-bold"
+          >
+
+            Fitness
+
+          </h3>
+
+          <p
+            class="mt-2 text-white/70 text-[13px] leading-6"
+          >
+
+            Daily fitness and exercise routines.
+
+          </p>
+
+          <button
+            class="mt-4 text-green-400 text-sm font-semibold"
+          >
+
+            Explore →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group relative rounded-[26px] overflow-hidden h-[250px] flex items-end p-5 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(168,85,247,0.15)] transition duration-500"
+      >
+
+        <img
+          src="/imgs/topic3.jpg"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+        ></div>
+
+        <div
+          class="relative z-10 text-white"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-lg border border-white/10"
+          >
+
+            <i class="fa-solid fa-apple-whole"></i>
+
+          </div>
+
+          <h3
+            class="mt-4 text-xl font-bold"
+          >
+
+            Nutrition
+
+          </h3>
+
+          <p
+            class="mt-2 text-white/70 text-[13px] leading-6"
+          >
+
+            Healthy diet and nutrition guides.
+
+          </p>
+
+          <button
+            class="mt-4 text-green-400 text-sm font-semibold"
+          >
+
+            Explore →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="group relative rounded-[26px] overflow-hidden h-[250px] flex items-end p-5 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(249,115,22,0.15)] transition duration-500"
+      >
+
+        <img
+          src="/imgs/topic4.jpg"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+        >
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+        ></div>
+
+        <div
+          class="relative z-10 text-white"
+        >
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-lg border border-white/10"
+          >
+
+            <i class="fa-solid fa-brain"></i>
+
+          </div>
+
+          <h3
+            class="mt-4 text-xl font-bold"
+          >
+
+            Mental Health
+
+          </h3>
+
+          <p
+            class="mt-2 text-white/70 text-[13px] leading-6"
+          >
+
+            Improve mental wellness and reduce stress.
+
+          </p>
+
+          <button
+            class="mt-4 text-green-400 text-sm font-semibold"
+          >
+
+            Explore →
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ===================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================== -->
+
+ <footer class="w-full bg-[#0f172a] text-white overflow-hidden">
+
+  <!-- TOP FOOTER -->
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- ABOUT -->
+      <div>
+
+        <!-- LOGO -->
+        <a href="/" class="flex items-center gap-3">
+
+          <div
+            class="w-14 h-14 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
+          >
+
+            <i class="fa-solid fa-heart-pulse text-white text-2xl"></i>
+
+          </div>
+
+          <div>
+
+            <h2 class="text-3xl font-bold">
+
+              <span class="text-blue-500">
+                deva
+              </span>
+
+              <span class="text-green-400">
+                24
+              </span>
+
+            </h2>
+
+            <p class="text-sm text-gray-400 mt-1">
+
+              Healthcare & Pharmacy
+
+            </p>
+
+          </div>
+
+        </a>
+
+        <!-- TEXT -->
+        <p
+          class="mt-6 text-gray-400 leading-8 text-sm"
+        >
+
+          Trusted online pharmacy and healthcare platform providing genuine medicines,
+          expert consultation and fast delivery services.
+
+        </p>
+
+        <!-- SOCIAL -->
+        <div class="flex items-center gap-4 mt-6">
+
+          <a
+            href="#"
+            class="w-11 h-11 bg-[#1e293b] hover:bg-blue-600 transition flex items-center justify-center text-lg"
+          >
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+          </a>
+
+          <a
+            href="#"
+            class="w-11 h-11 bg-[#1e293b] hover:bg-pink-500 transition flex items-center justify-center text-lg"
+          >
+
+            <i class="fa-brands fa-instagram"></i>
+
+          </a>
+
+          <a
+            href="#"
+            class="w-11 h-11 bg-[#1e293b] hover:bg-sky-500 transition flex items-center justify-center text-lg"
+          >
+
+            <i class="fa-brands fa-twitter"></i>
+
+          </a>
+
+          <a
+            href="#"
+            class="w-11 h-11 bg-[#1e293b] hover:bg-green-500 transition flex items-center justify-center text-lg"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div>
+
+        <h3 class="text-2xl font-bold">
+
+          Quick Links
+
+        </h3>
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a href="/index.html" class="text-gray-400 hover:text-white transition">
+
+              Home
+
+            </a>
+          </li>
+
+          <li>
+            <a href="/pages/about.html" class="text-gray-400 hover:text-white transition">
+
+              About Us
+
+            </a>
+          </li>
+
+          <li>
+            <a href="/pages/service.html" class="text-gray-400 hover:text-white transition">
+
+              Services
+
+            </a>
+          </li>
+
+          <li>
+            <a href="/pages/contact.html" class="text-gray-400 hover:text-white transition">
+
+              Contact
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+
+        <h3 class="text-2xl font-bold">
+
+          Our Services
+
+        </h3>
+
+        <ul class="mt-6 space-y-4">
+
+          <li class="text-gray-400">
+            Medicine Delivery
+          </li>
+
+          <li class="text-gray-400">
+            Doctor Consultation
+          </li>
+
+          <li class="text-gray-400">
+            Healthcare Products
+          </li>
+
+          <li class="text-gray-400">
+            Upload Prescription
+          </li>
+
+          <li class="text-gray-400">
+            24/7 Support
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+
+        <h3 class="text-2xl font-bold">
+
+          Contact Info
+
+        </h3>
+
+        <div class="mt-6 space-y-5">
+
+          <!-- ITEM -->
+          <div class="flex items-start gap-4">
+
+            <div
+              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
+            >
+
+              <i class="fa-solid fa-location-dot"></i>
+
+            </div>
+
+            <div>
+
+              <p class="text-gray-400 leading-7 text-sm">
+
+                123 Healthcare Street,
+                New Delhi, India
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="flex items-start gap-4">
+
+            <div
+              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-green-400 shrink-0"
+            >
+
+              <i class="fa-solid fa-phone"></i>
+
+            </div>
+
+            <div>
+
+              <p class="text-gray-400 text-sm">
+
+                +91 98765 43210
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="flex items-start gap-4">
+
+            <div
+              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
+            >
+
+              <i class="fa-solid fa-envelope"></i>
+
+            </div>
+
+            <div>
+
+              <p class="text-gray-400 text-sm">
+
+                support@deva24.com
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="border-t border-white/10">
+
+    <div
+      class="max-w-7xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-4"
+    >
+
+      <p class="text-sm text-gray-400 text-center">
+
+        © 2025 deva24. All Rights Reserved.
+
+      </p>
+
+      <div class="flex items-center gap-6">
+
+        <a
+          href="#"
+          class="text-sm text-gray-400 hover:text-white transition"
+        >
+
+          Privacy Policy
+
+        </a>
+
+        <a
+          href="#"
+          class="text-sm text-gray-400 hover:text-white transition"
+        >
+
+          Terms & Conditions
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>
