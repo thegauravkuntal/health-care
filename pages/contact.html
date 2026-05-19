@@ -25,11 +25,6 @@
 
 <body class="bg-white overflow-x-hidden">
 
-
- <!-- ========================= -->
-<!-- HEADER START -->
-<!-- ========================= -->
-
 <header
   class="w-full bg-white shadow-sm sticky top-0 z-50"
 >
@@ -38,7 +33,7 @@
 
     <!-- NAVBAR -->
     <div
-      class="flex items-center justify-between h-[68px]"
+      class="flex items-center justify-between h-[62px]"
     >
 
       <!-- ================= -->
@@ -47,46 +42,14 @@
 
       <a
         href="/index.html"
-        class="flex items-center gap-2"
+        class="flex items-center shrink-0"
       >
 
-        <!-- ICON -->
-        <div
-          class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center shadow-sm"
-        >
-
-          <i
-            class="fa-solid fa-heart-pulse text-white text-lg"
-          ></i>
-
-        </div>
-
-        <!-- TEXT -->
-        <div>
-
-          <h1
-            class="text-[28px] font-bold leading-none"
-          >
-
-            <span class="text-blue-600">
-              dava
-            </span>
-
-            <span class="text-green-500">
-              24
-            </span>
-
-          </h1>
-
-          <p
-            class="text-gray-500 text-[11px] mt-[1px]"
-          >
-
-            Your Health, Our Priority
-
-          </p>
-
-        </div>
+        <img
+          src="/imgs/logo.jpg"
+          alt="dava24 Logo"
+          class="h-[45px] w-auto object-contain"
+        />
 
       </a>
 
@@ -95,52 +58,49 @@
       <!-- ================= -->
 
       <nav
-        class="hidden lg:flex items-center gap-8"
+        class="hidden lg:flex items-center gap-7"
       >
 
         <a
           href="/index.html"
           class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
         >
-
           Home
-
         </a>
 
         <a
           href="/pages/about.html"
           class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
         >
-
           About Us
-
         </a>
 
         <a
           href="/pages/service.html"
           class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
         >
-
           Services
+        </a>
 
+        <a
+          href="/pages/franchise.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Franchise
         </a>
 
         <a
           href="/pages/blog.html"
           class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
         >
-
           Blog
-
         </a>
 
         <a
           href="/pages/contact.html"
           class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
         >
-
           Contact
-
         </a>
 
       </nav>
@@ -169,7 +129,7 @@
 
       <button
         id="menu-btn"
-        class="lg:hidden text-2xl text-[#111827]"
+        class="lg:hidden flex items-center justify-center text-[25px] text-[#111827]"
       >
 
         <i class="fa-solid fa-bars"></i>
@@ -183,7 +143,7 @@
 </header>
 
 <!-- ========================= -->
-<!-- MOBILE MENU -->
+<!-- MOBILE SIDEBAR -->
 <!-- ========================= -->
 
 <!-- OVERLAY -->
@@ -200,42 +160,24 @@
 
   <!-- TOP -->
   <div
-    class="flex items-center justify-between px-5 h-[70px] border-b border-gray-100"
+    class="flex items-center justify-between px-5 h-[62px] border-b border-gray-100"
   >
 
     <!-- LOGO -->
-    <div
-      class="flex items-center gap-2"
-    >
+    <div class="flex items-center shrink-0">
 
-      <div
-        class="w-9 h-9 rounded-xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
-      >
-
-        <i class="fa-solid fa-heart-pulse text-white"></i>
-
-      </div>
-
-      <h2
-        class="text-2xl font-bold"
-      >
-
-        <span class="text-blue-600">
-          dava
-        </span>
-
-        <span class="text-green-500">
-          24
-        </span>
-
-      </h2>
+      <img
+        src="/imgs/logo.jpg"
+        alt="dava24 Logo"
+        class="h-[42px] w-auto object-contain"
+      />
 
     </div>
 
     <!-- CLOSE -->
     <button
       id="close-btn"
-      class="text-xl text-gray-700"
+      class="text-[22px] text-gray-700"
     >
 
       <i class="fa-solid fa-xmark"></i>
@@ -244,59 +186,56 @@
 
   </div>
 
-  <!-- MOBILE LINKS -->
+  <!-- NAVLINKS -->
   <div
-    class="flex flex-col px-6 py-6"
+    class="flex flex-col px-6 py-5"
   >
 
     <a
       href="/index.html"
       class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
     >
-
       Home
-
     </a>
 
     <a
       href="/pages/about.html"
       class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
     >
-
       About Us
-
     </a>
 
     <a
       href="/pages/service.html"
       class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
     >
-
       Services
+    </a>
 
+    <a
+      href="/pages/franchise.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Franchise
     </a>
 
     <a
       href="/pages/blog.html"
       class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
     >
-
       Blog
-
     </a>
 
     <a
       href="/pages/contact.html"
       class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
     >
-
       Contact
-
     </a>
 
     <!-- BUTTON -->
     <button
-      class="mt-6 h-11 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
+      class="mt-5 h-10 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
     >
 
       Consult Now
@@ -616,10 +555,10 @@
       <div>
 
         <!-- LOGO -->
-        <a href="/" class="flex items-center gap-3">
+        <a href="/index.html" class="flex items-center gap-3">
 
           <div
-            class="w-14 h-14 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
+            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
           >
 
             <i class="fa-solid fa-heart-pulse text-white text-2xl"></i>
@@ -631,7 +570,7 @@
             <h2 class="text-3xl font-bold">
 
               <span class="text-blue-500">
-                deva
+                dava
               </span>
 
               <span class="text-green-400">
@@ -655,8 +594,9 @@
           class="mt-6 text-gray-400 leading-8 text-sm"
         >
 
-          Trusted online pharmacy and healthcare platform providing genuine medicines,
-          expert consultation and fast delivery services.
+          Trusted online pharmacy and healthcare platform
+          providing genuine medicines, healthcare products,
+          franchise opportunities and expert consultation services.
 
         </p>
 
@@ -665,7 +605,7 @@
 
           <a
             href="#"
-            class="w-11 h-11 bg-[#1e293b] hover:bg-blue-600 transition flex items-center justify-center text-lg"
+            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-blue-600 transition flex items-center justify-center text-lg"
           >
 
             <i class="fa-brands fa-facebook-f"></i>
@@ -674,7 +614,7 @@
 
           <a
             href="#"
-            class="w-11 h-11 bg-[#1e293b] hover:bg-pink-500 transition flex items-center justify-center text-lg"
+            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-pink-500 transition flex items-center justify-center text-lg"
           >
 
             <i class="fa-brands fa-instagram"></i>
@@ -683,7 +623,7 @@
 
           <a
             href="#"
-            class="w-11 h-11 bg-[#1e293b] hover:bg-sky-500 transition flex items-center justify-center text-lg"
+            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-sky-500 transition flex items-center justify-center text-lg"
           >
 
             <i class="fa-brands fa-twitter"></i>
@@ -692,7 +632,7 @@
 
           <a
             href="#"
-            class="w-11 h-11 bg-[#1e293b] hover:bg-green-500 transition flex items-center justify-center text-lg"
+            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-green-500 transition flex items-center justify-center text-lg"
           >
 
             <i class="fa-brands fa-whatsapp"></i>
@@ -715,7 +655,10 @@
         <ul class="mt-6 space-y-4">
 
           <li>
-            <a href="/index.html" class="text-gray-400 hover:text-white transition">
+            <a
+              href="/index.html"
+              class="text-gray-400 hover:text-white transition"
+            >
 
               Home
 
@@ -723,7 +666,10 @@
           </li>
 
           <li>
-            <a href="/pages/about.html" class="text-gray-400 hover:text-white transition">
+            <a
+              href="/pages/about.html"
+              class="text-gray-400 hover:text-white transition"
+            >
 
               About Us
 
@@ -731,7 +677,10 @@
           </li>
 
           <li>
-            <a href="/pages/service.html" class="text-gray-400 hover:text-white transition">
+            <a
+              href="/pages/service.html"
+              class="text-gray-400 hover:text-white transition"
+            >
 
               Services
 
@@ -739,7 +688,32 @@
           </li>
 
           <li>
-            <a href="/pages/contact.html" class="text-gray-400 hover:text-white transition">
+            <a
+              href="/pages/franchise.html"
+              class="text-gray-400 hover:text-white transition"
+            >
+
+              Franchise
+
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/pages/blog.html"
+              class="text-gray-400 hover:text-white transition"
+            >
+
+              Blog
+
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/pages/contact.html"
+              class="text-gray-400 hover:text-white transition"
+            >
 
               Contact
 
@@ -774,7 +748,7 @@
           </li>
 
           <li class="text-gray-400">
-            Upload Prescription
+            Franchise Support
           </li>
 
           <li class="text-gray-400">
@@ -796,11 +770,11 @@
 
         <div class="mt-6 space-y-5">
 
-          <!-- ITEM -->
+          <!-- ADDRESS -->
           <div class="flex items-start gap-4">
 
             <div
-              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
+              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
             >
 
               <i class="fa-solid fa-location-dot"></i>
@@ -820,11 +794,11 @@
 
           </div>
 
-          <!-- ITEM -->
+          <!-- PHONE -->
           <div class="flex items-start gap-4">
 
             <div
-              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-green-400 shrink-0"
+              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-green-400 shrink-0"
             >
 
               <i class="fa-solid fa-phone"></i>
@@ -843,11 +817,11 @@
 
           </div>
 
-          <!-- ITEM -->
+          <!-- EMAIL -->
           <div class="flex items-start gap-4">
 
             <div
-              class="w-11 h-11 bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
+              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
             >
 
               <i class="fa-solid fa-envelope"></i>
@@ -858,7 +832,7 @@
 
               <p class="text-gray-400 text-sm">
 
-                support@deva24.com
+                support@dava24.com
 
               </p>
 
@@ -883,7 +857,7 @@
 
       <p class="text-sm text-gray-400 text-center">
 
-        © 2025 deva24. All Rights Reserved.
+        © 2025 dava24. All Rights Reserved.
 
       </p>
 
