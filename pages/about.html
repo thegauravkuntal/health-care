@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Us - deva24</title>
+  <title>About Us - DAVA24</title>
 
-  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- FONT AWESOME -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
-  <!-- FONT -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
@@ -29,12 +25,16 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
     }
 
     body{
-      font-family:'Poppins',sans-serif;
       background:#f8fafc;
       overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
   </style>
@@ -43,120 +43,61 @@
 
 <body>
 
-
-<!-- ========================= -->
-<!-- HEADER START --> 
-<!-- ========================= -->
-
-<header
-  class="w-full bg-white shadow-sm sticky top-0 z-50"
->
+<!-- HEADER -->
+<header class="w-full bg-white shadow-sm sticky top-0 z-50">
 
   <div class="max-w-7xl mx-auto px-4 lg:px-8">
 
-    <!-- NAVBAR -->
-    <div
-      class="flex items-center justify-between h-[62px]"
-    >
+    <div class="flex items-center justify-between h-[62px]">
 
-      <!-- ================= -->
-      <!-- LOGO -->
-      <!-- ================= -->
-
-      <a
-        href="/index.html"
-        class="flex items-center shrink-0"
-      >
+      <a href="/index.html" class="flex items-center shrink-0">
 
         <img
           src="/imgs/logo.jpg"
-          alt="dava24 Logo"
+          alt="DAVA24 Logo"
           class="h-[45px] w-auto object-contain"
         />
 
       </a>
 
-      <!-- ================= -->
-      <!-- DESKTOP MENU -->
-      <!-- ================= -->
+      <nav class="hidden lg:flex items-center gap-7">
 
-      <nav
-        class="hidden lg:flex items-center gap-7"
-      >
-
-        <a
-          href="/index.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/index.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">
           Home
         </a>
 
-        <a
-          href="/pages/about.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/pages/about.html" class="text-blue-600 transition text-[14px] font-semibold">
           About Us
         </a>
 
-        <a
-          href="/pages/service.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/pages/service.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">
           Services
         </a>
 
-        <a
-          href="/pages/franchise.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/pages/franchise.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">
           Franchise
         </a>
 
-        <a
-          href="/pages/blog.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/pages/blog.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">
           Blog
         </a>
 
-        <a
-          href="/pages/contact.html"
-          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
-        >
+        <a href="/pages/contact.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">
           Contact
         </a>
 
       </nav>
 
-      <!-- ================= -->
-      <!-- RIGHT BUTTON -->
-      <!-- ================= -->
+      <div class="hidden lg:flex items-center">
 
-      <div
-        class="hidden lg:flex items-center"
-      >
-
-        <button
-          class="h-10 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
-        >
-
+        <button class="h-10 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold">
           Consult Now
-
         </button>
 
       </div>
 
-      <!-- ================= -->
-      <!-- MOBILE BUTTON -->
-      <!-- ================= -->
-
-      <button
-        id="menu-btn"
-        class="lg:hidden flex items-center justify-center text-[25px] text-[#111827]"
-      >
-
+      <button id="menu-btn" class="lg:hidden flex items-center justify-center text-[25px] text-[#111827]">
         <i class="fa-solid fa-bars"></i>
-
       </button>
 
     </div>
@@ -165,211 +106,77 @@
 
 </header>
 
-<!-- ========================= -->
-<!-- MOBILE SIDEBAR -->
-<!-- ========================= -->
+<!-- MOBILE MENU -->
+<div id="overlay" class="fixed inset-0 bg-black/40 z-[98] hidden opacity-0 transition duration-300"></div>
 
-<!-- OVERLAY -->
-<div
-  id="overlay"
-  class="fixed inset-0 bg-black/40 z-[98] hidden opacity-0 transition duration-300"
-></div>
+<div id="mobile-menu" class="fixed top-0 right-[-100%] w-[280px] h-screen bg-white z-[99] shadow-2xl transition-all duration-500">
 
-<!-- SIDEBAR -->
-<div
-  id="mobile-menu"
-  class="fixed top-0 right-[-100%] w-[280px] h-screen bg-white z-[99] shadow-2xl transition-all duration-500"
->
+  <div class="flex items-center justify-between px-5 h-[62px] border-b border-gray-100">
 
-  <!-- TOP -->
-  <div
-    class="flex items-center justify-between px-5 h-[62px] border-b border-gray-100"
-  >
+    <img
+      src="/imgs/logo.jpg"
+      alt="Logo"
+      class="h-[42px] w-auto object-contain"
+    />
 
-    <!-- LOGO -->
-    <div class="flex items-center shrink-0">
-
-      <img
-        src="/imgs/logo.jpg"
-        alt="dava24 Logo"
-        class="h-[42px] w-auto object-contain"
-      />
-
-    </div>
-
-    <!-- CLOSE -->
-    <button
-      id="close-btn"
-      class="text-[22px] text-gray-700"
-    >
-
+    <button id="close-btn" class="text-[22px] text-gray-700">
       <i class="fa-solid fa-xmark"></i>
-
     </button>
 
   </div>
 
-  <!-- NAVLINKS -->
-  <div
-    class="flex flex-col px-6 py-5"
-  >
+  <div class="flex flex-col px-6 py-5">
 
-    <a
-      href="/index.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      Home
-    </a>
+    <a href="/index.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Home</a>
+    <a href="/pages/about.html" class="py-3 border-b border-gray-100 text-[15px] font-semibold text-blue-600">About Us</a>
+    <a href="/pages/service.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Services</a>
+    <a href="/pages/franchise.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Franchise</a>
+    <a href="/pages/blog.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Blog</a>
+    <a href="/pages/contact.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Contact</a>
 
-    <a
-      href="/pages/about.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      About Us
-    </a>
-
-    <a
-      href="/pages/service.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      Services
-    </a>
-
-    <a
-      href="/pages/franchise.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      Franchise
-    </a>
-
-    <a
-      href="/pages/blog.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      Blog
-    </a>
-
-    <a
-      href="/pages/contact.html"
-      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
-    >
-      Contact
-    </a>
-
-    <!-- BUTTON -->
-    <button
-      class="mt-5 h-10 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
-    >
-
+    <button class="mt-5 h-10 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold">
       Consult Now
-
     </button>
 
   </div>
 
 </div>
 
-<!-- ========================= -->
-<!-- HEADER END -->
-<!-- ========================= -->
-<!-- ========================= -->
-<!-- HEADER END -->
-<!-- ========================= -->
+<!-- HERO -->
+<section class="relative w-full h-[75vh] overflow-hidden">
 
-
-<section class="relative w-full h-[68vh] overflow-hidden">
-
-  <!-- BG IMAGE -->
   <img
     src="/imgs/about-hero.webp"
     alt="About Banner"
     class="absolute inset-0 w-full h-full object-cover"
   />
 
-  <!-- OVERLAY -->
-  <div
-    class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/40"
-  ></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
 
-  <!-- CONTENT -->
-  <div
-    class="relative z-10 h-full flex items-center justify-center text-center"
-  >
+  <div class="relative z-10 h-full flex items-center justify-center text-center">
 
-    <div
-      class="max-w-3xl px-6 text-white"
-    >
+    <div class="max-w-4xl px-6 text-white">
 
-      <!-- BREADCRUMB -->
-      <div
-        class="flex items-center justify-center gap-3 text-sm text-gray-300"
-      >
+      <span class="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/10 text-[11px] uppercase tracking-[3px] text-green-400 font-semibold backdrop-blur-md">
+        Care Never Sleeps
+      </span>
 
-        <a
-          href="#"
-          class="hover:text-white transition"
-        >
-
-          Home
-
-        </a>
-
-        <i
-          class="fa-solid fa-angle-right text-[10px]"
-        ></i>
-
-        <span
-          class="text-green-400 font-medium"
-        >
-
-          About Us
-
-        </span>
-
-      </div>
-
-      <!-- HEADING -->
-      <h1
-        class="mt-5 text-4xl lg:text-6xl font-bold leading-tight"
-      >
-
-        Trusted Healthcare
-        <br>
-
-        For Every Family
-
+      <h1 class="mt-6 text-4xl lg:text-6xl font-bold leading-tight">
+        About DAVA24
       </h1>
 
-      <!-- TEXT -->
-      <p
-        class="mt-5 text-base lg:text-lg text-gray-200 leading-8 max-w-2xl mx-auto"
-      >
-
-        We provide genuine medicines, expert consultation
-        and fast healthcare services with complete trust
-        and care for your family.
-
+      <p class="mt-6 text-base lg:text-lg text-gray-200 leading-8 max-w-3xl mx-auto">
+        DAVA24 is a trusted 24×7 medical store and pharmacy franchise network committed to making healthcare affordable, accessible, and dependable for every family.
       </p>
 
-      <!-- BUTTONS -->
-      <div
-        class="flex flex-wrap justify-center gap-4 mt-8"
-      >
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
 
-        <button
-          class="h-12 px-7 rounded-xl bg-green-500 hover:bg-green-600 transition text-white text-sm font-semibold shadow-lg"
-        >
-
+        <button class="h-12 px-7 rounded-xl bg-green-500 hover:bg-green-600 transition text-white text-sm font-semibold shadow-lg">
           Explore Services
-
         </button>
 
-        <button
-          class="h-12 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold shadow-lg"
-        >
-
+        <button class="h-12 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold shadow-lg">
           Contact Us
-
         </button>
 
       </div>
@@ -380,256 +187,75 @@
 
 </section>
 
-<section class="w-full py-12 bg-white overflow-hidden">
+<!-- ABOUT -->
+<section class="w-full py-14 bg-white overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <div
-      class="grid lg:grid-cols-2 gap-8 items-center"
-    >
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
 
-      <!-- ================================= -->
-      <!-- LEFT IMAGE -->
-      <!-- ================================= -->
+      <div class="relative">
 
-      <div
-        class="relative"
-      >
-
-        <!-- MAIN IMAGE -->
         <img
           src="/imgs/about-main.webp"
           alt="About"
-          class="w-full h-[360px] object-cover rounded-3xl shadow-lg"
+          class="w-full h-[460px] object-cover rounded-3xl shadow-xl"
         />
 
-        <!-- SMALL IMAGE -->
-        <img
-          src="/imgs/about-small.webp"
-          alt="About"
-          class="absolute -bottom-4 right-6 w-[170px] h-[120px] object-cover rounded-2xl border-[5px] border-white shadow-xl"
-        />
+        <div class="absolute bottom-5 right-5 bg-blue-600 rounded-2xl px-6 py-5 shadow-xl">
 
-        <!-- EXPERIENCE -->
-        <div
-          class="absolute top-5 left-5 bg-white rounded-2xl shadow-lg px-5 py-3"
-        >
-
-          <h2
-            class="text-2xl font-bold text-blue-600"
-          >
-
-            10+
-
+          <h2 class="text-3xl font-bold text-white">
+            24×7
           </h2>
 
-          <p
-            class="text-gray-500 text-[11px] mt-1"
-          >
-
-            Years Experience
-
+          <p class="text-blue-100 text-sm mt-1">
+            Healthcare Support
           </p>
 
         </div>
 
       </div>
 
-      <!-- ================================= -->
-      <!-- RIGHT CONTENT -->
-      <!-- ================================= -->
-
       <div>
 
-        <!-- TAG -->
-        <span
-          class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 text-[11px] font-semibold uppercase tracking-[3px]"
-        >
-
-          About Us
-
+        <span class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 text-[11px] font-semibold uppercase tracking-[3px]">
+          About DAVA24
         </span>
 
-        <!-- TITLE -->
-        <h2
-          class="mt-4 text-3xl lg:text-4xl font-bold text-[#111827] leading-tight"
-        >
-
-          Trusted Healthcare
+        <h2 class="mt-4 text-3xl lg:text-5xl font-bold text-[#111827] leading-tight">
+          Care Never
           <span class="text-blue-600">
-
-            Everyday
-
+            Sleeps
           </span>
-
         </h2>
 
-        <!-- TEXT -->
-        <p
-          class="mt-4 text-gray-600 text-sm leading-7"
-        >
-
-          deva24 provides genuine medicines,
-          healthcare products and fast delivery
-          with trusted customer support.
-
+        <p class="mt-6 text-gray-600 text-sm lg:text-base leading-8">
+          At DAVA24, we believe healthcare should always remain accessible, affordable, and dependable because “Care Never Sleeps.” DAVA24 is a growing offline medical store franchise chain and 24-hours operating medical shop network committed to providing genuine medicines, healthcare products, wellness essentials, and personal care solutions at affordable prices across India.
         </p>
 
-        <!-- FEATURES -->
-        <div
-          class="grid sm:grid-cols-2 gap-4 mt-7"
-        >
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          We provide genuine prescription medicines, over-the-counter medicines, healthcare products, wellness supplements, and personal care essentials through our growing PAN India pharmacy network.
+        </p>
 
-          <!-- ITEM -->
-          <div
-            class="flex items-start gap-3 bg-[#f8fafc] rounded-2xl p-4 hover:shadow-lg transition"
-          >
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          At DAVA24, we understand that healthcare needs can arise at any time. That is why our stores operate with a commitment to serving communities with reliable healthcare solutions, quality medicines, and professional support whenever needed.
+        </p>
 
-            <div
-              class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg shrink-0"
-            >
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          Through our expanding franchise network and customer-focused approach, we ensure quick medicine availability and trusted healthcare services closer to people's homes.
+        </p>
 
-              <i class="fa-solid fa-bullseye"></i>
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          We aim to simplify healthcare by delivering authentic products at competitive prices while maintaining the highest standards of trust, quality, and customer satisfaction.
+        </p>
 
-            </div>
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          Whether you need daily healthcare essentials, wellness products, medical support, or prescribed medicines, DAVA24 stands committed to providing affordable healthcare solutions with convenience, care, and reliability.
+        </p>
 
-            <div>
-
-              <h3
-                class="text-sm font-bold text-[#111827]"
-              >
-
-                Our Mission
-
-              </h3>
-
-              <p
-                class="mt-1 text-gray-500 text-xs leading-6"
-              >
-
-                Affordable healthcare services.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <!-- ITEM -->
-          <div
-            class="flex items-start gap-3 bg-[#f8fafc] rounded-2xl p-4 hover:shadow-lg transition"
-          >
-
-            <div
-              class="w-11 h-11 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-lg shrink-0"
-            >
-
-              <i class="fa-solid fa-shield-heart"></i>
-
-            </div>
-
-            <div>
-
-              <h3
-                class="text-sm font-bold text-[#111827]"
-              >
-
-                Our Vision
-
-              </h3>
-
-              <p
-                class="mt-1 text-gray-500 text-xs leading-6"
-              >
-
-                Trusted healthcare platform.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <!-- ITEM -->
-          <div
-            class="flex items-start gap-3 bg-[#f8fafc] rounded-2xl p-4 hover:shadow-lg transition"
-          >
-
-            <div
-              class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg shrink-0"
-            >
-
-              <i class="fa-solid fa-heart-pulse"></i>
-
-            </div>
-
-            <div>
-
-              <h3
-                class="text-sm font-bold text-[#111827]"
-              >
-
-                Quality Care
-
-              </h3>
-
-              <p
-                class="mt-1 text-gray-500 text-xs leading-6"
-              >
-
-                Genuine medicines and support.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <!-- ITEM -->
-          <div
-            class="flex items-start gap-3 bg-[#f8fafc] rounded-2xl p-4 hover:shadow-lg transition"
-          >
-
-            <div
-              class="w-11 h-11 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-lg shrink-0"
-            >
-
-              <i class="fa-solid fa-truck-fast"></i>
-
-            </div>
-
-            <div>
-
-              <h3
-                class="text-sm font-bold text-[#111827]"
-              >
-
-                Fast Delivery
-
-              </h3>
-
-              <p
-                class="mt-1 text-gray-500 text-xs leading-6"
-              >
-
-                Quick doorstep delivery service.
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- BUTTON -->
-        <button
-          class="mt-7 h-11 px-7 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold shadow-md"
-        >
-
-          Read More
-
-        </button>
+        <p class="mt-5 text-gray-600 text-sm lg:text-base leading-8">
+          DAVA24 is more than a pharmacy chain — it is a healthcare partner built on trust, affordability, quality, and commitment to customer well-being.
+        </p>
 
       </div>
 
@@ -639,96 +265,190 @@
 
 </section>
 
-<!-- ================================= -->
-<!-- FEATURES -->
-<!-- ================================= -->
-
-<section class="w-full py-14 bg-[#f8fafc]">
+<!-- VISION & MISSION -->
+<section class="w-full py-14 bg-[#f8fafc] overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid lg:grid-cols-2 gap-7">
 
-      <!-- CARD -->
-      <div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
 
-        <div
-          class="w-16 h-16 mx-auto rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-2xl"
-        >
+        <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-eye"></i>
+        </div>
 
-          <i class="fa-solid fa-capsules"></i>
+        <h2 class="mt-5 text-2xl font-bold text-[#111827]">
+          Our Vision
+        </h2>
 
+        <p class="mt-5 text-gray-600 text-sm leading-8">
+          To become India's most trusted pharmacy franchise network by making genuine healthcare products accessible, affordable, and available 24×7 for every community.
+        </p>
+
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+
+        <div class="w-14 h-14 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+
+        <h2 class="mt-5 text-2xl font-bold text-[#111827]">
+          Our Mission
+        </h2>
+
+        <div class="mt-5 space-y-4 text-sm text-gray-600 leading-7">
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+            <p>Provide genuine and quality medicines at affordable prices</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+            <p>Operate reliable 24-hours medical stores for uninterrupted healthcare support</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+            <p>Build a strong PAN India pharmacy franchise network</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+            <p>Ensure quick medicine availability through efficient supply systems</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+            <p>Deliver trusted healthcare solutions with customer-focused service</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="w-full py-14 bg-white overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center max-w-3xl mx-auto">
+
+      <span class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 text-[11px] font-semibold uppercase tracking-[3px]">
+        What We Offer
+      </span>
+
+      <h2 class="mt-4 text-3xl lg:text-5xl font-bold text-[#111827]">
+        Trusted Healthcare
+        <span class="text-blue-600">
+          Solutions
+        </span>
+      </h2>
+
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
+
+        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+          💊
         </div>
 
         <h3 class="mt-5 text-xl font-bold text-[#111827]">
           Genuine Medicines
         </h3>
 
-        <p class="mt-3 text-gray-600 text-sm leading-7">
-          100% original medicines.
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          We provide authentic medicines sourced from trusted and verified manufacturers.
         </p>
 
       </div>
 
-      <!-- CARD -->
-      <div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
 
-        <div
-          class="w-16 h-16 mx-auto rounded-full bg-green-100 text-green-600 flex items-center justify-center text-2xl"
-        >
-
-          <i class="fa-solid fa-truck-fast"></i>
-
+        <div class="w-16 h-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl">
+          🏥
         </div>
 
         <h3 class="mt-5 text-xl font-bold text-[#111827]">
-          Fast Delivery
+          Healthcare & Wellness Products
         </h3>
 
-        <p class="mt-3 text-gray-600 text-sm leading-7">
-          Quick doorstep delivery.
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          Complete healthcare solutions including wellness supplements and personal care products.
         </p>
 
       </div>
 
-      <!-- CARD -->
-      <div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
 
-        <div
-          class="w-16 h-16 mx-auto rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-2xl"
-        >
-
-          <i class="fa-solid fa-credit-card"></i>
-
+        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+          🕒
         </div>
 
         <h3 class="mt-5 text-xl font-bold text-[#111827]">
-          Secure Payment
+          24 Hours Medical Support
         </h3>
 
-        <p class="mt-3 text-gray-600 text-sm leading-7">
-          Multiple payment options.
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          Dedicated to serving customers day and night with uninterrupted healthcare support.
         </p>
 
       </div>
 
-      <!-- CARD -->
-      <div class="bg-white p-8 rounded-2xl text-center shadow-sm">
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
 
-        <div
-          class="w-16 h-16 mx-auto rounded-full bg-green-100 text-green-600 flex items-center justify-center text-2xl"
-        >
-
-          <i class="fa-solid fa-headset"></i>
-
+        <div class="w-16 h-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl">
+          🚚
         </div>
 
         <h3 class="mt-5 text-xl font-bold text-[#111827]">
-          24/7 Support
+          Reliable Service
         </h3>
 
-        <p class="mt-3 text-gray-600 text-sm leading-7">
-          Anytime customer support.
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          Faster medicine availability and dependable healthcare support.
+        </p>
+
+      </div>
+
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
+
+        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl">
+          💰
+        </div>
+
+        <h3 class="mt-5 text-xl font-bold text-[#111827]">
+          Affordable Pricing
+        </h3>
+
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          Healthcare products at economical and competitive prices.
+        </p>
+
+      </div>
+
+      <div class="bg-[#f8fafc] rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition duration-300">
+
+        <div class="w-16 h-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center text-2xl">
+          ❤️
+        </div>
+
+        <h3 class="mt-5 text-xl font-bold text-[#111827]">
+          Customer First Approach
+        </h3>
+
+        <p class="mt-4 text-sm text-gray-500 leading-7">
+          Healthcare is about care, trust, responsibility, and customer satisfaction.
         </p>
 
       </div>
@@ -739,550 +459,50 @@
 
 </section>
 
-<!-- ================================= -->
-<!-- STATS -->
-<!-- ================================= -->
-
-<section class="w-full py-10 bg-[#0f172a] overflow-hidden">
+<!-- WHY CHOOSE -->
+<section class="w-full py-14 bg-[#0f172a] overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-6">
 
-    <!-- ================================= -->
-    <!-- STATS WRAPPER -->
-    <!-- ================================= -->
+    <div class="text-center max-w-3xl mx-auto">
 
-    <div
-      class="grid grid-cols-2 lg:grid-cols-4 gap-5"
-    >
-
-      <!-- CARD -->
-      <div
-        class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl py-7 px-5 text-center overflow-hidden hover:-translate-y-2 transition duration-500"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-blue-500/20 rounded-full blur-3xl group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- ICON -->
-        <div
-          class="relative z-10 w-14 h-14 mx-auto rounded-2xl bg-blue-500 text-white flex items-center justify-center text-2xl shadow-lg"
-        >
-
-          <i class="fa-solid fa-users"></i>
-
-        </div>
-
-        <!-- NUMBER -->
-        <h2
-          class="relative z-10 mt-5 text-3xl lg:text-4xl font-bold text-white"
-        >
-
-          500K+
-
-        </h2>
-
-        <!-- TEXT -->
-        <p
-          class="relative z-10 mt-2 text-sm text-gray-300"
-        >
-
-          Happy Customers
-
-        </p>
-
-      </div>
-
-      <!-- CARD -->
-      <div
-        class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl py-7 px-5 text-center overflow-hidden hover:-translate-y-2 transition duration-500"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-green-500/20 rounded-full blur-3xl group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- ICON -->
-        <div
-          class="relative z-10 w-14 h-14 mx-auto rounded-2xl bg-green-500 text-white flex items-center justify-center text-2xl shadow-lg"
-        >
-
-          <i class="fa-solid fa-box-open"></i>
-
-        </div>
-
-        <!-- NUMBER -->
-        <h2
-          class="relative z-10 mt-5 text-3xl lg:text-4xl font-bold text-white"
-        >
-
-          10K+
-
-        </h2>
-
-        <!-- TEXT -->
-        <p
-          class="relative z-10 mt-2 text-sm text-gray-300"
-        >
-
-          Products
-
-        </p>
-
-      </div>
-
-      <!-- CARD -->
-      <div
-        class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl py-7 px-5 text-center overflow-hidden hover:-translate-y-2 transition duration-500"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-blue-500/20 rounded-full blur-3xl group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- ICON -->
-        <div
-          class="relative z-10 w-14 h-14 mx-auto rounded-2xl bg-blue-500 text-white flex items-center justify-center text-2xl shadow-lg"
-        >
-
-          <i class="fa-solid fa-user-doctor"></i>
-
-        </div>
-
-        <!-- NUMBER -->
-        <h2
-          class="relative z-10 mt-5 text-3xl lg:text-4xl font-bold text-white"
-        >
-
-          200+
-
-        </h2>
-
-        <!-- TEXT -->
-        <p
-          class="relative z-10 mt-2 text-sm text-gray-300"
-        >
-
-          Expert Doctors
-
-        </p>
-
-      </div>
-
-      <!-- CARD -->
-      <div
-        class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl py-7 px-5 text-center overflow-hidden hover:-translate-y-2 transition duration-500"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-green-500/20 rounded-full blur-3xl group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- ICON -->
-        <div
-          class="relative z-10 w-14 h-14 mx-auto rounded-2xl bg-green-500 text-white flex items-center justify-center text-2xl shadow-lg"
-        >
-
-          <i class="fa-solid fa-award"></i>
-
-        </div>
-
-        <!-- NUMBER -->
-        <h2
-          class="relative z-10 mt-5 text-3xl lg:text-4xl font-bold text-white"
-        >
-
-          10+
-
-        </h2>
-
-        <!-- TEXT -->
-        <p
-          class="relative z-10 mt-2 text-sm text-gray-300"
-        >
-
-          Years Experience
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================================= -->
-<!-- TEAM SECTION -->
-<!-- ================================= -->
-
-<section class="w-full py-12 bg-white overflow-hidden">
-
-  <div class="max-w-7xl mx-auto px-6">
-
-    <!-- ================================= -->
-    <!-- TOP -->
-    <!-- ================================= -->
-
-    <div
-      class="text-center max-w-xl mx-auto"
-    >
-
-      <!-- TAG -->
-      <span
-        class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 text-[11px] font-semibold uppercase tracking-[3px]"
-      >
-
-        Our Team
-
+      <span class="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/10 text-[11px] uppercase tracking-[3px] text-green-400 font-semibold">
+        Why Choose DAVA24?
       </span>
 
-      <!-- TITLE -->
-      <h2
-        class="mt-4 text-2xl lg:text-4xl font-bold text-[#111827]"
-      >
-
-        Meet Our Experts
-
+      <h2 class="mt-5 text-3xl lg:text-5xl font-bold text-white leading-tight">
+        Trusted Medicines
+        <span class="text-green-400">
+          Affordable Healthcare
+        </span>
       </h2>
 
     </div>
 
-    <!-- ================================= -->
-    <!-- GRID -->
-    <!-- ================================= -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
-    <div
-      class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10"
-    >
-
-      <!-- CARD -->
-      <div
-        class="group relative bg-[#f8fafc] rounded-3xl p-4 overflow-hidden hover:shadow-2xl transition duration-500 hover:-translate-y-2"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-blue-100 rounded-full blur-3xl opacity-60 group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- IMAGE -->
-        <div
-          class="relative z-10 overflow-hidden rounded-2xl"
-        >
-
-          <img
-            src="/imgs/team1.webp"
-            class="w-full h-[210px] object-cover group-hover:scale-110 transition duration-500"
-          />
-
-        </div>
-
-        <!-- CONTENT -->
-        <div
-          class="relative z-10 text-center pt-5"
-        >
-
-          <h3
-            class="text-base font-bold text-[#111827]"
-          >
-
-            Dr. Rajesh Sharma
-
-          </h3>
-
-          <p
-            class="text-gray-500 text-xs mt-1"
-          >
-
-            Chief Medical Officer
-
-          </p>
-
-          <!-- SOCIAL -->
-          <div
-            class="flex items-center justify-center gap-2 mt-4"
-          >
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ Genuine Medicines
       </div>
 
-      <!-- CARD -->
-      <div
-        class="group relative bg-[#f8fafc] rounded-3xl p-4 overflow-hidden hover:shadow-2xl transition duration-500 hover:-translate-y-2"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-green-100 rounded-full blur-3xl opacity-60 group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- IMAGE -->
-        <div
-          class="relative z-10 overflow-hidden rounded-2xl"
-        >
-
-          <img
-            src="/imgs/team2.webp"
-            class="w-full h-[210px] object-cover group-hover:scale-110 transition duration-500"
-          />
-
-        </div>
-
-        <!-- CONTENT -->
-        <div
-          class="relative z-10 text-center pt-5"
-        >
-
-          <h3
-            class="text-base font-bold text-[#111827]"
-          >
-
-            Dr. Priya Verma
-
-          </h3>
-
-          <p
-            class="text-gray-500 text-xs mt-1"
-          >
-
-            Senior Consultant
-
-          </p>
-
-          <!-- SOCIAL -->
-          <div
-            class="flex items-center justify-center gap-2 mt-4"
-          >
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ Affordable Prices
       </div>
 
-      <!-- CARD -->
-      <div
-        class="group relative bg-[#f8fafc] rounded-3xl p-4 overflow-hidden hover:shadow-2xl transition duration-500 hover:-translate-y-2"
-      >
-
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-blue-100 rounded-full blur-3xl opacity-60 group-hover:scale-150 transition duration-500"
-        ></div>
-
-        <!-- IMAGE -->
-        <div
-          class="relative z-10 overflow-hidden rounded-2xl"
-        >
-
-          <img
-            src="/imgs/team3.webp"
-            class="w-full h-[210px] object-cover group-hover:scale-110 transition duration-500"
-          />
-
-        </div>
-
-        <!-- CONTENT -->
-        <div
-          class="relative z-10 text-center pt-5"
-        >
-
-          <h3
-            class="text-base font-bold text-[#111827]"
-          >
-
-            Dr. Amit Patel
-
-          </h3>
-
-          <p
-            class="text-gray-500 text-xs mt-1"
-          >
-
-            Pharmacy Head
-
-          </p>
-
-          <!-- SOCIAL -->
-          <div
-            class="flex items-center justify-center gap-2 mt-4"
-          >
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ 24×7 Medical Store Support
       </div>
 
-      <!-- CARD -->
-      <div
-        class="group relative bg-[#f8fafc] rounded-3xl p-4 overflow-hidden hover:shadow-2xl transition duration-500 hover:-translate-y-2"
-      >
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ PAN India Franchise Network
+      </div>
 
-        <!-- BG EFFECT -->
-        <div
-          class="absolute -top-10 -right-10 w-28 h-28 bg-green-100 rounded-full blur-3xl opacity-60 group-hover:scale-150 transition duration-500"
-        ></div>
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ Quick Medicine Availability
+      </div>
 
-        <!-- IMAGE -->
-        <div
-          class="relative z-10 overflow-hidden rounded-2xl"
-        >
-
-          <img
-            src="/imgs/team4.webp"
-            class="w-full h-[210px] object-cover group-hover:scale-110 transition duration-500"
-          />
-
-        </div>
-
-        <!-- CONTENT -->
-        <div
-          class="relative z-10 text-center pt-5"
-        >
-
-          <h3
-            class="text-base font-bold text-[#111827]"
-          >
-
-            Dr. Neha Singh
-
-          </h3>
-
-          <p
-            class="text-gray-500 text-xs mt-1"
-          >
-
-            Health Specialist
-
-          </p>
-
-          <!-- SOCIAL -->
-          <div
-            class="flex items-center justify-center gap-2 mt-4"
-          >
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-            <a
-              href="#"
-              class="w-8 h-8 rounded-xl bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-xs"
-            >
-
-              <i class="fa-brands fa-instagram"></i>
-
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-white">
+        ✔ Dedicated Customer Support
       </div>
 
     </div>
@@ -1290,286 +510,112 @@
   </div>
 
 </section>
-<!-- ================================= -->
-<!-- CTA -->
-<!-- ================================= -->
 
-<section class="w-full py-10 bg-white overflow-hidden">
+<!-- PROMISE -->
+<section class="w-full py-14 bg-white overflow-hidden">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-5xl mx-auto px-6 text-center">
 
-    <!-- ================================= -->
-    <!-- CTA BANNER -->
-    <!-- ================================= -->
+    <span class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 text-[11px] font-semibold uppercase tracking-[3px]">
+      Our Promise
+    </span>
 
-    <div
-      class="relative rounded-[30px] overflow-hidden min-h-[260px] flex items-center"
-    >
+    <h2 class="mt-5 text-3xl lg:text-5xl font-bold text-[#111827] leading-tight">
+      Always There When
+      <span class="text-blue-600">
+        You Need Us
+      </span>
+    </h2>
 
-      <!-- BG IMAGE -->
-      <img
-        src="/imgs/cta-banner.webp"
-        alt="CTA Banner"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
+    <p class="mt-6 text-gray-600 text-sm lg:text-base leading-8">
+      At DAVA24, every medicine we provide reflects our commitment to quality, affordability, trust, and care. We continuously strengthen our pharmacy network to ensure families across India receive genuine medicines and dependable healthcare support — anytime they need it.
+    </p>
 
-      <!-- OVERLAY -->
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-[#0f172a]/95 via-[#0f172a]/75 to-[#0f172a]/30"
-      ></div>
-
-      <!-- CONTENT -->
-      <div
-        class="relative z-10 w-full px-7 lg:px-14 py-10"
-      >
-
-        <div
-          class="max-w-2xl text-white"
-        >
-
-          <!-- TAG -->
-          <span
-            class="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/10 text-[11px] uppercase tracking-[3px]"
-          >
-
-            24/7 Healthcare Support
-
-          </span>
-
-          <!-- TITLE -->
-          <h2
-            class="mt-5 text-3xl lg:text-5xl font-bold leading-tight"
-          >
-
-            Need Medical
-            <span class="text-green-400">
-
-              Consultation?
-
-            </span>
-
-          </h2>
-
-          <!-- TEXT -->
-          <p
-            class="mt-4 text-sm lg:text-base text-white/80 leading-7 max-w-xl"
-          >
-
-            Connect with expert doctors and get trusted healthcare
-            advice anytime from your home.
-
-          </p>
-
-          <!-- BUTTONS -->
-          <div
-            class="flex flex-wrap gap-4 mt-7"
-          >
-
-            <button
-              class="h-11 px-7 rounded-xl bg-green-500 hover:bg-green-600 transition text-white text-sm font-semibold shadow-lg"
-            >
-
-              Book Appointment
-
-            </button>
-
-            <button
-              class="h-11 px-7 rounded-xl bg-white/10 border border-white/20 hover:bg-white hover:text-[#111827] transition text-white text-sm font-semibold"
-            >
-
-              Contact Us
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="mt-8 text-lg lg:text-2xl font-bold text-[#111827] leading-10">
+      DAVA24 – Care Never Sleeps.
     </div>
+
+    <p class="mt-3 text-green-600 font-medium text-sm lg:text-base leading-8">
+      Trusted Medicines • Affordable Healthcare • Available 24×7
+    </p>
 
   </div>
 
 </section>
-<!-- ================================= -->
+
 <!-- FOOTER -->
-<!-- ================================= -->
-
-
 <footer class="w-full bg-[#0f172a] text-white overflow-hidden">
 
-  <!-- TOP FOOTER -->
-  <div class="max-w-7xl mx-auto px-6 py-16">
+  <div class="max-w-7xl mx-auto px-6 py-10">
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
       <!-- ABOUT -->
       <div>
 
-        <!-- LOGO -->
         <a href="/index.html" class="flex items-center gap-3">
 
-          <div
-            class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
-          >
-
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center">
             <i class="fa-solid fa-heart-pulse text-white text-2xl"></i>
-
           </div>
 
           <div>
 
             <h2 class="text-3xl font-bold">
-
-              <span class="text-blue-500">
-                dava
-              </span>
-
-              <span class="text-green-400">
-                24
-              </span>
-
+              <span class="text-blue-500">DAVA</span>
+              <span class="text-green-400">24</span>
             </h2>
 
             <p class="text-sm text-gray-400 mt-1">
-
-              Healthcare & Pharmacy
-
+              Care Never Sleeps
             </p>
 
           </div>
 
         </a>
 
-        <!-- TEXT -->
-        <p
-          class="mt-6 text-gray-400 leading-8 text-sm"
-        >
-
-          Trusted online pharmacy and healthcare platform
-          providing genuine medicines, healthcare products,
-          franchise opportunities and expert consultation services.
-
+        <p class="mt-6 text-gray-400 leading-8 text-sm">
+          DAVA24 is a trusted 24×7 pharmacy franchise network committed to providing genuine medicines, affordable healthcare products, and dependable pharmacy services across India.
         </p>
-
-        <!-- SOCIAL -->
-        <div class="flex items-center gap-4 mt-6">
-
-          <a
-            href="#"
-            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-blue-600 transition flex items-center justify-center text-lg"
-          >
-
-            <i class="fa-brands fa-facebook-f"></i>
-
-          </a>
-
-          <a
-            href="#"
-            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-pink-500 transition flex items-center justify-center text-lg"
-          >
-
-            <i class="fa-brands fa-instagram"></i>
-
-          </a>
-
-          <a
-            href="#"
-            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-sky-500 transition flex items-center justify-center text-lg"
-          >
-
-            <i class="fa-brands fa-twitter"></i>
-
-          </a>
-
-          <a
-            href="#"
-            class="w-11 h-11 rounded-xl bg-[#1e293b] hover:bg-green-500 transition flex items-center justify-center text-lg"
-          >
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-          </a>
-
-        </div>
 
       </div>
 
-      <!-- QUICK LINKS -->
+      <!-- COMPANY -->
       <div>
 
-        <h3 class="text-2xl font-bold">
-
-          Quick Links
-
+        <h3 class="text-xl font-bold">
+          Our Company
         </h3>
 
-        <ul class="mt-6 space-y-4">
+        <ul class="mt-6 space-y-4 text-gray-400 text-sm">
 
           <li>
-            <a
-              href="/index.html"
-              class="text-gray-400 hover:text-white transition"
-            >
-
-              Home
-
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pages/about.html"
-              class="text-gray-400 hover:text-white transition"
-            >
-
+            <a href="/pages/about.html" class="hover:text-white transition">
               About Us
-
             </a>
           </li>
 
           <li>
-            <a
-              href="/pages/service.html"
-              class="text-gray-400 hover:text-white transition"
-            >
-
-              Services
-
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pages/franchise.html"
-              class="text-gray-400 hover:text-white transition"
-            >
-
+            <a href="/pages/franchise.html" class="hover:text-white transition">
               Franchise
-
             </a>
           </li>
 
           <li>
-            <a
-              href="/pages/blog.html"
-              class="text-gray-400 hover:text-white transition"
-            >
+            <a href="/pages/service.html" class="hover:text-white transition">
+              Services
+            </a>
+          </li>
 
+          <li>
+            <a href="/pages/blog.html" class="hover:text-white transition">
               Blog
-
             </a>
           </li>
 
           <li>
-            <a
-              href="/pages/contact.html"
-              class="text-gray-400 hover:text-white transition"
-            >
-
-              Contact
-
+            <a href="/pages/contact.html" class="hover:text-white transition">
+              Contact Us
             </a>
           </li>
 
@@ -1577,35 +623,31 @@
 
       </div>
 
-      <!-- SERVICES -->
+      <!-- LINKS -->
       <div>
 
-        <h3 class="text-2xl font-bold">
-
-          Our Services
-
+        <h3 class="text-xl font-bold">
+          Useful Links
         </h3>
 
-        <ul class="mt-6 space-y-4">
+        <ul class="mt-6 space-y-4 text-gray-400 text-sm">
 
-          <li class="text-gray-400">
-            Medicine Delivery
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Privacy Policy
+            </a>
           </li>
 
-          <li class="text-gray-400">
-            Doctor Consultation
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Terms & Conditions
+            </a>
           </li>
 
-          <li class="text-gray-400">
-            Healthcare Products
-          </li>
-
-          <li class="text-gray-400">
-            Franchise Support
-          </li>
-
-          <li class="text-gray-400">
-            24/7 Support
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Support
+            </a>
           </li>
 
         </ul>
@@ -1615,81 +657,46 @@
       <!-- CONTACT -->
       <div>
 
-        <h3 class="text-2xl font-bold">
-
+        <h3 class="text-xl font-bold">
           Contact Info
-
         </h3>
 
-        <div class="mt-6 space-y-5">
+        <div class="mt-6 space-y-5 text-gray-400 text-sm leading-7">
 
-          <!-- ADDRESS -->
-          <div class="flex items-start gap-4">
+          <div class="flex items-start gap-3">
 
-            <div
-              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
-            >
+            <i class="fa-solid fa-location-dot text-green-400 mt-1"></i>
 
-              <i class="fa-solid fa-location-dot"></i>
-
-            </div>
-
-            <div>
-
-              <p class="text-gray-400 leading-7 text-sm">
-
-                123 Healthcare Street,
-                New Delhi, India
-
-              </p>
-
-            </div>
+            <p>
+              Mumbai Address: LODHA SIGNET 1 UNIT NO. 825 PREMIER COLONY GROUND
+              KALYAN THANE Mangaon 421204
+            </p>
 
           </div>
 
-          <!-- PHONE -->
-          <div class="flex items-start gap-4">
+          <div class="flex items-center gap-3">
 
-            <div
-              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-green-400 shrink-0"
+            <i class="fa-solid fa-phone text-blue-400"></i>
+
+            <a
+              href="tel:+917982642624"
+              class="hover:text-white transition"
             >
-
-              <i class="fa-solid fa-phone"></i>
-
-            </div>
-
-            <div>
-
-              <p class="text-gray-400 text-sm">
-
-                +91 98765 43210
-
-              </p>
-
-            </div>
+              +91 7982642624
+            </a>
 
           </div>
 
-          <!-- EMAIL -->
-          <div class="flex items-start gap-4">
+          <div class="flex items-center gap-3">
 
-            <div
-              class="w-11 h-11 rounded-xl bg-[#1e293b] flex items-center justify-center text-blue-500 shrink-0"
+            <i class="fa-solid fa-envelope text-green-400"></i>
+
+            <a
+              href="mailto:support@dava24.com"
+              class="hover:text-white transition"
             >
-
-              <i class="fa-solid fa-envelope"></i>
-
-            </div>
-
-            <div>
-
-              <p class="text-gray-400 text-sm">
-
-                support@dava24.com
-
-              </p>
-
-            </div>
+              support@dava24.com
+            </a>
 
           </div>
 
@@ -1702,39 +709,14 @@
   </div>
 
   <!-- BOTTOM -->
+
   <div class="border-t border-white/10">
 
-    <div
-      class="max-w-7xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-4"
-    >
+    <div class="max-w-7xl mx-auto px-6 py-5 text-center">
 
-      <p class="text-sm text-gray-400 text-center">
-
-        © 2025 dava24. All Rights Reserved.
-
+      <p class="text-sm text-gray-400">
+        © 2026 DAVA24. All Rights Reserved.
       </p>
-
-      <div class="flex items-center gap-6">
-
-        <a
-          href="#"
-          class="text-sm text-gray-400 hover:text-white transition"
-        >
-
-          Privacy Policy
-
-        </a>
-
-        <a
-          href="#"
-          class="text-sm text-gray-400 hover:text-white transition"
-        >
-
-          Terms & Conditions
-
-        </a>
-
-      </div>
 
     </div>
 
@@ -1743,6 +725,6 @@
 </footer>
 
 <script src="/script.js"></script>
-
 </body>
 </html>
+```
