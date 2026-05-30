@@ -31,66 +31,227 @@
 <body class="bg-[#f8fafc] text-[#111827] overflow-x-hidden">
 
 <!-- HEADER -->
-<header class="w-full bg-white shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 lg:px-8">
-    <div class="flex items-center justify-between h-[62px]">
+<header
+  class="w-full bg-white shadow-sm sticky top-0 z-50"
+>
 
-      <a href="/index.html" class="flex items-center shrink-0">
-        <img src="/imgs/logo.jpg" alt="DAVA24 Logo" class="h-[45px] w-auto object-contain" />
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+
+    <!-- NAVBAR -->
+    <div
+      class="flex items-center justify-between h-[62px]"
+    >
+
+      <!-- ================= -->
+      <!-- LOGO -->
+      <!-- ================= -->
+
+      <a
+        href="/index.html"
+        class="flex items-center shrink-0"
+      >
+
+        <img
+          src="/imgs/logo.jpg"
+          alt="dava24 Logo"
+          class="h-[45px] w-auto object-contain"
+        />
+
       </a>
 
-      <nav class="hidden lg:flex items-center gap-7">
-        <a href="/index.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">Home</a>
-        <a href="/pages/about.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">About Us</a>
-        <a href="/pages/service.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">Services</a>
-        <a href="/pages/franchise.html" class="text-blue-600 text-[14px] font-semibold">Franchise</a>
-        <a href="/pages/blog.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">Blog</a>
-        <a href="/pages/contact.html" class="text-gray-700 hover:text-blue-600 transition text-[14px] font-medium">Contact</a>
+      <!-- ================= -->
+      <!-- DESKTOP MENU -->
+      <!-- ================= -->
+
+      <nav
+        class="hidden lg:flex items-center gap-7"
+      >
+
+        <a
+          href="/index.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Home
+        </a>
+
+        <a
+          href="/pages/about.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          About Us
+        </a>
+
+        <a
+          href="/pages/career.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Career
+        </a>
+
+        <a
+          href="/pages/franchise.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Franchise
+        </a>
+
+        <a
+          href="/pages/blog.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Blog
+        </a>
+
+        <a
+          href="/pages/contact.html"
+          class="nav-link relative text-gray-700 hover:text-blue-600 transition text-[14px] font-medium"
+        >
+          Contact
+        </a>
+
       </nav>
 
-      <div class="hidden lg:flex items-center">
-        <button class="h-10 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold">
+      <!-- ================= -->
+      <!-- RIGHT BUTTON -->
+      <!-- ================= -->
+
+      <div
+        class="hidden lg:flex items-center"
+      >
+
+        <button
+          class="h-10 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
+        >
+
           Consult Now
+
         </button>
+
       </div>
 
-      <button id="menu-btn" class="lg:hidden flex items-center justify-center text-[25px] text-[#111827]">
+      <!-- ================= -->
+      <!-- MOBILE BUTTON -->
+      <!-- ================= -->
+
+      <button
+        id="menu-btn"
+        class="lg:hidden flex items-center justify-center text-[25px] text-[#111827]"
+      >
+
         <i class="fa-solid fa-bars"></i>
+
       </button>
 
     </div>
+
   </div>
+
 </header>
 
-<div id="overlay" class="fixed inset-0 bg-black/40 z-[98] hidden opacity-0 transition duration-300"></div>
+<!-- ========================= -->
+<!-- MOBILE SIDEBAR -->
+<!-- ========================= -->
 
-<div id="mobile-menu" class="fixed top-0 right-[-100%] w-[280px] h-screen bg-white z-[99] shadow-2xl transition-all duration-500">
+<!-- OVERLAY -->
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black/40 z-[98] hidden opacity-0 transition duration-300"
+></div>
 
-  <div class="flex items-center justify-between px-5 h-[62px] border-b border-gray-100">
+<!-- SIDEBAR -->
+<div
+  id="mobile-menu"
+  class="fixed top-0 right-[-100%] w-[280px] h-screen bg-white z-[99] shadow-2xl transition-all duration-500"
+>
 
-    <img src="/imgs/logo.jpg" alt="DAVA24 Logo" class="h-[42px] w-auto object-contain" />
+  <!-- TOP -->
+  <div
+    class="flex items-center justify-between px-5 h-[62px] border-b border-gray-100"
+  >
 
-    <button id="close-btn" class="text-[22px] text-gray-700">
+    <!-- LOGO -->
+    <div class="flex items-center shrink-0">
+
+      <img
+        src="/imgs/logo.jpg"
+        alt="dava24 Logo"
+        class="h-[42px] w-auto object-contain"
+      />
+
+    </div>
+
+    <!-- CLOSE -->
+    <button
+      id="close-btn"
+      class="text-[22px] text-gray-700"
+    >
+
       <i class="fa-solid fa-xmark"></i>
+
     </button>
 
   </div>
 
-  <div class="flex flex-col px-6 py-5">
+  <!-- NAVLINKS -->
+  <div
+    class="flex flex-col px-6 py-5"
+  >
 
-    <a href="/index.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Home</a>
-    <a href="/pages/about.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">About Us</a>
-    <a href="/pages/service.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Services</a>
-    <a href="/pages/franchise.html" class="py-3 border-b border-gray-100 text-[15px] font-semibold text-blue-600">Franchise</a>
-    <a href="/pages/blog.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Blog</a>
-    <a href="/pages/contact.html" class="py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700">Contact</a>
+    <a
+      href="/index.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Home
+    </a>
 
-    <button class="mt-5 h-10 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold">
+    <a
+      href="/pages/about.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      About Us
+    </a>
+
+    <a
+      href="/pages/career.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Career
+    </a>
+
+    <a
+      href="/pages/franchise.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Franchise
+    </a>
+
+    <a
+      href="/pages/blog.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Blog
+    </a>
+
+    <a
+      href="/pages/contact.html"
+      class="nav-link py-3 border-b border-gray-100 text-[15px] font-medium text-gray-700 hover:text-blue-600 transition"
+    >
+      Contact
+    </a>
+
+    <!-- BUTTON -->
+    <button
+      class="mt-5 h-10 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white text-sm font-semibold"
+    >
+
       Consult Now
+
     </button>
 
   </div>
+
 </div>
+
 
 <!-- HERO SECTION -->
 <section class="relative w-full min-h-[90vh] overflow-hidden flex items-center justify-center">
